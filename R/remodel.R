@@ -30,9 +30,8 @@ remodel <- function(selection_content){
 
   table_lines <-
     stringr::str_replace_all(selection_content, "&\\s*\n", "& ") %>%
-    stringr::str_replace_all("\n\\s*&", " &") %>%
-    stringr::str_replace_all("(^|\\n)\\\\[:graph:]*(?=\\n|$)", "") %>%
-    stringr::str_replace_all("\\\\.*", "") %>%
+    stringr::str_replace_all("(^|\\n)\\s*\\\\[:graph:]*(?=\\n|$)", "") %>%
+    stringr::str_replace_all("\\\\\\\\.*", "") %>%
     stringr::str_replace_all("\n\n", "\n") %>%
     stringr::str_replace_all("\n\\s*(\n|$)", "\n") %>%
     stringr::str_replace_all("&", ",")
