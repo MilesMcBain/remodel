@@ -1,0 +1,22 @@
+\begin{tabular}{l|cccccccccc}
+number of flips & 11 & 12 & 13 & 14 & 15 & 16 & 17 & 18 & 19 & 20 \\
+number of heads & 8  &  8 &  9 & 10 & 10 & 10 & 10 & 10 & 10 & 11 \\ \hline
+proportion & .73 & .67 & .69 & .71 & .67 &  .63 & .59 & .56 & .53 & .55\\
+\end{tabular}
+\end{tabular}
+
+\begin{tabular}{c|c|l|c}
+Usual notation &
+  Signif. stars &
+  English translation &
+  The null is... \\[3pt] \hline
+&&&\\[-6pt]
+$p>.05$ &  & The test wasn't significant &   Retained\\[6pt] %\hline
+$p<.05$ & * & The test was significant at $\alpha = .05$  & Rejected \\
+        &   & but not at  $\alpha =.01$ or $\alpha = .001$. & \\[6pt] %\hline
+
+$p<.01$ & **  &The test was significant at $\alpha = .05$  & Rejected \\
+        &   &and $\alpha = .01$ but not at  $\alpha = .001$. & \\[6pt] %\hline
+
+$p<.001$ & *** & The test was significant at all levels  & Rejected \\ %\hline
+ \end{tabular}\tabcapsep

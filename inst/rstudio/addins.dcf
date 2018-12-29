@@ -1,0 +1,4 @@
+Name: Remodel LaTeX Table
+Description: Convert a LaTeX table to a tribble()
+Binding: remodel_selection
+Interactive: false
