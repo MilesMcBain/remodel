@@ -34,10 +34,12 @@ remodel <- function(selection_content){
     stringr::str_replace_all("(^|\\n)\\\\[:graph:]*(?=\\n|$)", "") %>%
     stringr::str_replace_all("\\\\.*", "") %>%
     stringr::str_replace_all("\n\n", "\n") %>%
-    stringr::str_replace_all("(?<=^|\n)\\s*\n", "\n") %>%
+    stringr::str_replace_all("\n\\s*(\n|$)", "\n") %>%
     stringr::str_replace_all("&", ",")
 
-    output_table <- read.csv(textConnection(table_lines), header = FALSE)
+    output_table <- read.csv(textConnection(table_lines),
+                             header = FALSE,
+                             blank.lines.skip = TRUE)
 
     datapasta::tribble_construct(output_table)
 }
