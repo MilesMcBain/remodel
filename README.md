@@ -1,2 +1,2 @@
 # remodel
-Turn that LaTeX from upsidedown.
+Turn that LaTeX frown upsidedown.
