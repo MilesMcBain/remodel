@@ -38,7 +38,8 @@ remodel <- function(selection_content){
 
     output_table <- read.csv(textConnection(table_lines),
                              header = FALSE,
-                             blank.lines.skip = TRUE)
+                             blank.lines.skip = TRUE,
+                             strip.white = TRUE)
 
     datapasta::tribble_construct(output_table)
 }
